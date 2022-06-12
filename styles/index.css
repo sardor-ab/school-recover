@@ -33,7 +33,7 @@
     top: 100%;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index: 5;
     background-color: #fafafa;
     visibility: hidden;
     opacity: 0;
@@ -84,4 +84,149 @@
   .button__wrapper {
     display: none;
   }
+}
+
+@media (max-width: 660px) {
+  .hero__wrapper-upper-left,
+  .hero__wrapper-upper-right {
+    width: 100% !important;
+  }
+  .hero__wrapper-upper-right {
+    height: 265px;
+  }
+  .hero__wrapper-upper {
+    flex-direction: column;
+  }
+
+  .container {
+    position: static !important;
+    width: 100%;
+  }
+
+  .hero__wrapper-lower {
+    flex-direction: column;
+  }
+}
+
+/* .hero {
+}
+
+.hero__wrapper {
+} */
+
+.hero__wrapper-upper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.hero__wrapper-upper-left,
+.hero__wrapper-upper-right {
+  width: 50%;
+}
+
+.hero__wrapper-upper-left-section_title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #96bb7c;
+  margin-bottom: 25px;
+}
+
+.hero__wrapper-upper-left-subtitle {
+  font-size: 58px;
+  line-height: 80px;
+  font-weight: 700;
+  color: #252b42;
+}
+
+.hero__wrapper-upper-left-slogan {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #737373;
+  margin-bottom: 25px;
+}
+
+.container {
+  position: relative;
+  width: 95%;
+}
+.student-background-image {
+  width: 250px;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blob {
+  position: absolute;
+  background-color: #fff;
+  width: inherit;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blob:nth-child(2) {
+  filter: blur(5px);
+  z-index: 2;
+}
+
+.hero__wrapper-lower {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.feature__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature__container-icon {
+  color: #fff;
+}
+
+.feature-icon {
+  background-color: #e74040;
+  border-radius: 50%;
+  font-size: 28px;
+  padding: 8px 10px;
+}
+
+.feature__container-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+}
+
+.feature__container-title::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background-color: #e74040;
+  margin: 10px 0;
+}
+
+.feature__container-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
 }
