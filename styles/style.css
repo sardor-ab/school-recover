@@ -65,13 +65,13 @@ body {
   display: none;
 }
 
+.button--icon {
+  min-width: initial;
+  padding: 0.5rem;
+}
+
 @media (min-width: 600px) {
   .button span {
     display: initial;
   }
-}
-
-.button--icon {
-  min-width: initial;
-  padding: 0.5rem;
 }
