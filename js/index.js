@@ -84,6 +84,27 @@ const courses = [
   },
 ];
 
+const teachers = [
+  {
+    id: "teacher-0",
+    name: "Dasha Lobacheva",
+    position: "Teacher of Mathematics",
+    image: "./images/dasha-lobacheva-teacher-unsplash.jpg",
+  },
+  {
+    id: "teacher-1",
+    name: "Christina Gallagher",
+    position: "Teacher of Intro to IT",
+    image: "./images/christopher-campbell-teacher-unsplash.jpg",
+  },
+  {
+    id: "teacher-2",
+    name: "Amal Agzamov",
+    position: "Teacher of Robotics",
+    image: "./images/amal-aglamov-teacher-unsplash.jpg",
+  },
+];
+
 function createFeature(id, icon, title, description) {
   return `
   <div class="feature" id=${id}>
@@ -120,6 +141,26 @@ function createCourse(id, title, description, image) {
   </div>`;
 }
 
+function createTeacherCard(id, name, position, image) {
+  return `
+  <div class="teacher-card" id=${id}>
+    <div class="teacher-card__container">
+      <div class="teacher-card__container-image">
+        <img src="${image}" alt="Teacher image" class="teacher-image"/>
+      </div>
+      <div class="teacher-card__container-content">
+        <h3 class="teacher-card__container-content-name">${name}</h3>
+        <p class="teacher-card__container-content-position">${position}</p>
+        <div class="teacher-card__container-content-social">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
 $(function () {
   features.forEach((feature) => {
     $(".hero__wrapper-lower").append(
@@ -147,6 +188,21 @@ $(function () {
   courses.forEach((course) => {
     $(".products__wrapper-lower").append(
       $(createCourse(course.id, course.title, course.description, course.image))
+    );
+  });
+});
+
+$(function () {
+  teachers.forEach((teacher) => {
+    $(".team__wrapper-lower").append(
+      $(
+        createTeacherCard(
+          teacher.id,
+          teacher.name,
+          teacher.position,
+          teacher.image
+        )
+      )
     );
   });
 });

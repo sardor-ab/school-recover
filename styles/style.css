@@ -51,6 +51,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
+  cursor: pointer;
 }
 
 .button svg {
