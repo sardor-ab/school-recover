@@ -93,7 +93,7 @@ const teachers = [
   },
   {
     id: "teacher-1",
-    name: "Christina Gallagher",
+    name: "Christina Pevchikh",
     position: "Teacher of Intro to IT",
     image: "./images/christopher-campbell-teacher-unsplash.jpg",
   },
@@ -151,7 +151,7 @@ function createTeacherCard(id, name, position, image) {
       <div class="teacher-card__container-content">
         <h3 class="teacher-card__container-content-name">${name}</h3>
         <p class="teacher-card__container-content-position">${position}</p>
-        <div class="teacher-card__container-content-social">
+        <div class="teacher-card__container-content-social wrapper__socials">
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-instagram"></i>
